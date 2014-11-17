@@ -117,6 +117,7 @@ module.exports = class XMLElement extends XMLNode
   # `options.indent` indentation for pretty print
   # `options.offset` how many indentations to add to every line for pretty print
   # `options.newline` newline sequence for pretty print
+  # `options.closingTag` enforces closing tag for all elements
   toString: (options, level) ->
     pretty = options?.pretty or false
     indent = options?.indent ? '  '
