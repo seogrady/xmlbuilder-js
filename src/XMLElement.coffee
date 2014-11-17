@@ -145,9 +145,7 @@ module.exports = class XMLElement extends XMLNode
     if @children.length == 0
       # empty element
       if closingTag
-        r += '>'
-        r += @children[0].value
-        r += '</' + @name + '>'
+        r += '></' + this.name + '>'
       else
         r += '/>'
       r += newline if pretty
