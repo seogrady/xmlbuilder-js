@@ -67,7 +67,8 @@ module.exports = class XMLBuilder
     indent = options?.indent ? '  '
     offset = options?.offset ? 0
     newline = options?.newline ? '\n'
-
+    closingTag = options?.closingTag or false
+    
     r = ''
     r += @xmldec.toString options if @xmldec?
     r += @doctype.toString options if @doctype?
